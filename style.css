@@ -33,9 +33,19 @@ h1 {
     color: black;
 }
 
-p {
-    font-size: 1.2em;
-    color: black;
+.letter {
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace; /* or a cursive font */
+    white-space: pre-line;
+}
+
+.letter p {
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+.letter p:last-child {
+    margin-bottom: 0;
 }
 
 .btn {
@@ -112,7 +122,7 @@ p {
 .footer {
     text-align: center;
     padding: 20px;
-    background: none;
+    background: black;
     color: #fff;
 }
 
@@ -154,9 +164,22 @@ body::-webkit-scrollbar-thumb {
 
 /* Mobile Styling */
 @media (max-width: 768px) {
+    .grid-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
     .grid-item {
-        flex: 1 1 45%;
-        max-width: 45%;
+        flex: none;
+        display: inline-block;
+        width: 80%;
+        margin-right: 10px;
+    }
+
+    .grid-item img {
+        width: 100%;
+        height: auto;
     }
 
     .balloons img {
@@ -165,9 +188,22 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 480px) {
+    .grid-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
     .grid-item {
-        flex: 1 1 100%;
-        max-width: 100%;
+        flex: none;
+        display: inline-block;
+        width: 80%;
+        margin-right: 10px;
+    }
+
+    .grid-item img {
+        width: 100%;
+        height: auto;
     }
 
     .balloons img {
